@@ -4,8 +4,8 @@ import type { Dictionary } from "@/i18n/dictionaries";
 export default function Testimonials({ dict }: { dict: Dictionary }) {
   return (
     <section className="border-t border-[rgba(216,168,24,0.3)] bg-white">
-      <div className="mx-auto max-w-[1400px] px-10 py-[130px]">
-        <div className="mb-[72px] flex flex-wrap items-end justify-between gap-6">
+      <div className="mx-auto max-w-[1400px] px-5 py-20 sm:px-10 sm:py-[130px]">
+        <div className="mb-12 flex flex-wrap items-end justify-between gap-6 sm:mb-[72px]">
           <div className="flex flex-col gap-[18px]">
             <span className="font-serif text-[15px] italic text-or">
               ( {dict.testimonials.paren} )
@@ -20,11 +20,12 @@ export default function Testimonials({ dict }: { dict: Dictionary }) {
           </span>
         </div>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] border-l border-[rgba(216,168,24,0.35)]">
+        {/* min(300px,100%) : évite le débordement horizontal sur les mobiles < 380px */}
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] border-l border-[rgba(216,168,24,0.35)] max-md:gap-y-10">
           {dict.testimonials.items.map((t) => (
             <figure
               key={t.name}
-              className="m-0 flex min-w-0 flex-col gap-6 border-r border-[rgba(216,168,24,0.35)] py-3 pl-9 pr-11"
+              className="m-0 flex min-w-0 flex-col gap-6 border-r border-[rgba(216,168,24,0.35)] py-3 pl-5 pr-5 sm:pl-9 sm:pr-11"
             >
               <span className="h-[34px] font-serif text-[80px] italic leading-[0.55] text-or">
                 “

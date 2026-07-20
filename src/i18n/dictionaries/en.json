@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Guinea to the World — International travel agency",
-    "description": "Language immersions, tourism, flight tickets and tailor-made support. From Conakry to Accra and beyond — travel with a house you can trust."
+    "description": "Language immersions, tourism, flight tickets and tailor-made support. From Guinea to the whole world — travel with a house you can trust."
   },
   "nav": {
     "home": "Home",
@@ -19,13 +19,12 @@
     "kicker": "Conakry — Accra — The world",
     "title1": "Your gateway",
     "titleEm": "to the world",
-    "sub": "Language immersions, tourism, flight tickets and tailor-made support. From Conakry to Accra and beyond — travel with a house you can trust.",
+    "sub": "Language immersions, tourism, flight tickets and tailor-made support. From Guinea to the whole world — travel with a house you can trust.",
     "cta1": "Contact us",
     "cta2": "Our services",
     "bgPlaceholder": "Cinematic image — plane wing at sunset or Accra skyline"
   },
   "stats": [
-    { "value": "2", "label": "Countries" },
     { "value": "6", "label": "Complete services" },
     { "value": "3 yrs", "label": "On-the-ground experience" },
     { "value": "100%", "label": "A-to-Z support" }
@@ -38,7 +37,7 @@
     "paren": "Our services",
     "title1": "The art of travelling,",
     "titleEm": "without a single worry",
-    "intro": "Six specialities, one house. From the first idea to your return home, every detail is orchestrated by our teams in Conakry and Accra.",
+    "intro": "Six specialities, one house. From the first idea to your return home, every detail is orchestrated from our head office in Conakry — to every destination in the world.",
     "link": "Talk to an advisor",
     "items": [
       { "title": "Immersion & languages", "desc": "Supervised language stays in Accra and Conakry: intensive English, housing and personal follow-up." },

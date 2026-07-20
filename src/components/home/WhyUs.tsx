@@ -11,8 +11,8 @@ export default function WhyUs({ dict }: { dict: Dictionary }) {
       <div className="pointer-events-none absolute -right-[140px] -top-[140px] h-[420px] w-[420px] rounded-full border border-[rgba(216,168,24,0.15)]" />
       <div className="pointer-events-none absolute -right-20 -top-20 h-[300px] w-[300px] rounded-full border border-[rgba(216,168,24,0.12)]" />
 
-      <div className="mx-auto max-w-[1400px] px-10 py-[130px]">
-        <div className="mb-20 flex max-w-[660px] flex-col gap-[18px]">
+      <div className="mx-auto max-w-[1400px] px-10 py-[130px] max-md:py-20 max-sm:px-6">
+        <div className="mb-20 flex max-w-[660px] flex-col gap-[18px] max-sm:mb-12">
           <span className="font-serif text-[15px] italic text-or">
             ( {dict.why.paren} )
           </span>
@@ -21,7 +21,8 @@ export default function WhyUs({ dict }: { dict: Dictionary }) {
           </h2>
         </div>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-x-12 gap-y-14">
+        {/* 2×2 équilibré dès 640px, 4 colonnes au même seuil (~1224px) que l'auto-fit d'origine */}
+        <div className="grid grid-cols-1 gap-x-12 gap-y-14 sm:grid-cols-2 min-[1224px]:grid-cols-4">
           {dict.why.items.map((r, i) => (
             <div key={r.title} className="flex min-w-0 flex-col gap-[18px]">
               <span className="font-serif text-[44px] font-normal italic leading-none text-[rgba(216,168,24,0.5)]">

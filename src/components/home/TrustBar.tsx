@@ -5,7 +5,7 @@ import { partners } from "@/lib/site";
 export default function TrustBar({ dict }: { dict: Dictionary }) {
   return (
     <section className="bg-creme">
-      <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-center gap-[72px] px-10 py-14">
+      <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-center gap-[72px] px-10 py-14 max-[1140px]:gap-x-12 max-md:gap-x-10 max-md:gap-y-7 max-sm:px-6">
         <span className="text-[11px] font-semibold uppercase tracking-[4px] text-[rgba(10,10,10,0.4)]">
           {dict.trust.label}
         </span>

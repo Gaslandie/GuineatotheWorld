@@ -28,13 +28,20 @@ export default function SiteFooter({
 
   return (
     <footer className="bg-black text-white/65">
-      <div className="mx-auto max-w-[1400px] px-10 pt-20">
+      <div className="mx-auto max-w-[1400px] px-6 pt-20 sm:px-10">
         <div className="flex flex-wrap items-start justify-between gap-12 border-b border-[rgba(216,168,24,0.2)] pb-16">
           {/* Marque */}
           <div className="flex max-w-[340px] flex-col gap-5">
             <div className="flex items-center gap-[14px]">
-              <div className="flex h-[44px] w-[44px] items-center justify-center rounded-full border border-or font-serif text-[15px] text-or">
-                GT
+              <div className="flex h-[44px] w-[44px] shrink-0 items-center justify-center overflow-hidden rounded-full border border-or bg-white">
+                {/* eslint-disable-next-line @next/next/no-img-element -- petit logo statique, l'optimisation next/image est inutile ici */}
+                <img
+                  src="/logo_GTTW.jpg"
+                  alt="Logo Guinea to the World"
+                  width={44}
+                  height={44}
+                  className="h-full w-full scale-[1.08] object-contain"
+                />
               </div>
               <span className="font-serif text-[19px] font-medium text-white">
                 Guinea to the World
@@ -45,7 +52,7 @@ export default function SiteFooter({
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-[72px]">
+          <div className="flex flex-wrap gap-x-[72px] gap-y-10">
             {/* Navigation */}
             <div className="flex flex-col gap-[13px]">
               <h4 className={h4Class}>{dict.footer.nav}</h4>
@@ -109,15 +116,16 @@ export default function SiteFooter({
           </div>
         </div>
 
-        {/* Filigrane géant */}
+        {/* Filigrane géant — min abaissé à 20px pour tenir sans être coupé sur mobile */}
         <div className="overflow-hidden pb-3 pt-[34px]">
-          <div className="whitespace-nowrap text-center font-serif text-[clamp(44px,7.2vw,104px)] font-medium leading-none tracking-[2px] text-[rgba(250,247,240,0.08)]">
+          <div className="whitespace-nowrap text-center font-serif text-[clamp(20px,7.2vw,104px)] font-medium leading-none tracking-[2px] text-[rgba(250,247,240,0.08)]">
             Guinea to the World
           </div>
         </div>
 
-        {/* Barre de copyright */}
-        <div className="flex flex-wrap justify-between gap-2 pb-[26px] pt-[18px] text-[12.5px] font-light text-white/35">
+        {/* Barre de copyright — empilée et centrée sur mobile ; marge à droite
+            pour ne pas passer sous le bouton WhatsApp flottant */}
+        <div className="flex flex-col items-center gap-2 pb-[26px] pt-[18px] text-center text-[12.5px] font-light text-white/35 sm:flex-row sm:justify-between sm:pr-[84px] sm:text-left">
           <span>{dict.footer.copyright}</span>
           <span className="tracking-[3px]">CONAKRY · ACCRA</span>
         </div>

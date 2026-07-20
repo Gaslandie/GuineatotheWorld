@@ -13,8 +13,8 @@ export default function GallerySection({
 }) {
   return (
     <section id="galerie" className="bg-creme">
-      <div className="mx-auto max-w-[1400px] px-10 pb-[110px] pt-[130px]">
-        <div className="mb-[60px] flex flex-wrap items-end justify-between gap-6">
+      <div className="mx-auto max-w-[1400px] px-5 pb-[70px] pt-20 sm:px-10 sm:pb-[110px] sm:pt-[130px]">
+        <div className="mb-10 flex flex-wrap items-end justify-between gap-6 sm:mb-[60px]">
           <div className="flex max-w-[600px] flex-col gap-[18px]">
             <span className="font-serif text-[15px] italic text-or">
               ( {dict.gallery.paren} )
@@ -36,8 +36,9 @@ export default function GallerySection({
           {dict.gallery.slots.map((label, i) => (
             <div
               key={label}
-              // Le span 2×2 ne s'applique que lorsque la grille a au moins 2 colonnes (≥560px)
-              className={`min-w-0 ${i === 0 ? "min-[560px]:col-span-2 min-[560px]:row-span-2" : ""}`}
+              // Le span 2×2 ne s'applique que lorsque la grille a au moins 2 colonnes
+              // (≥520px de viewport avec le px-5 mobile)
+              className={`min-w-0 ${i === 0 ? "min-[520px]:col-span-2 min-[520px]:row-span-2" : ""}`}
             >
               <ImageSlot label={label} radius={6} />
             </div>

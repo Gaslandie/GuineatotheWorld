@@ -24,18 +24,18 @@ export default function Hero({
       </div>
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(7,17,12,0.6)_0%,rgba(7,17,12,0.15)_45%,rgba(7,17,12,0.85)_100%)]" />
 
-      {/* Contenu central */}
-      {/* pt élargi sous 640px : le header empilé est plus haut que les 150px du design */}
-      <div className="pointer-events-none relative flex flex-1 flex-col items-center justify-center gap-[30px] px-8 pb-10 pt-[220px] sm:pt-[150px] text-center">
+      {/* Contenu central — le header mobile tient désormais sur une ligne (hamburger),
+          plus besoin de sur-compenser sa hauteur */}
+      <div className="pointer-events-none relative flex flex-1 flex-col items-center justify-center gap-[30px] px-6 pb-10 pt-[130px] text-center sm:px-8 sm:pt-[150px]">
         <div className="flex items-center gap-[18px]">
-          <span className="block h-px w-[60px] bg-[linear-gradient(90deg,transparent,#D8A818)]" />
-          <span className="text-[12px] font-semibold uppercase tracking-[5px] text-or">
+          <span className="hidden h-px w-[60px] bg-[linear-gradient(90deg,transparent,#D8A818)] sm:block" />
+          <span className="text-[11px] font-semibold uppercase tracking-[3px] text-or sm:text-[12px] sm:tracking-[5px]">
             {dict.hero.kicker}
           </span>
-          <span className="block h-px w-[60px] bg-[linear-gradient(90deg,#D8A818,transparent)]" />
+          <span className="hidden h-px w-[60px] bg-[linear-gradient(90deg,#D8A818,transparent)] sm:block" />
         </div>
 
-        <h1 className="m-0 max-w-[1050px] text-balance font-serif text-[clamp(52px,8vw,112px)] font-normal leading-[1.02] tracking-[-1px] text-white">
+        <h1 className="m-0 max-w-[1050px] text-balance font-serif text-[clamp(42px,8vw,112px)] font-normal leading-[1.02] tracking-[-1px] text-white">
           {dict.hero.title1}
           <br />
           <em className="font-normal text-or">{dict.hero.titleEm}</em>
@@ -48,13 +48,13 @@ export default function Hero({
         <div className="pointer-events-auto mt-[10px] flex flex-wrap justify-center gap-5">
           <Link
             href={`/${lang}/contact`}
-            className="whitespace-nowrap rounded-full bg-rouge px-[46px] py-[18px] text-[13px] font-semibold uppercase tracking-[2.5px] text-white shadow-[0_16px_44px_rgba(168,0,0,0.45)] hover:-translate-y-[3px] hover:bg-rouge-vif"
+            className="whitespace-nowrap rounded-full bg-rouge px-8 py-[18px] text-[13px] font-semibold uppercase tracking-[2.5px] text-white shadow-[0_16px_44px_rgba(168,0,0,0.45)] hover:-translate-y-[3px] hover:bg-rouge-vif sm:px-[46px]"
           >
             {dict.hero.cta1}
           </Link>
           <Link
             href={`/${lang}/services`}
-            className="whitespace-nowrap rounded-full border border-white/40 px-[46px] py-[17px] text-[13px] font-semibold uppercase tracking-[2.5px] text-white backdrop-blur-[8px] hover:border-or hover:text-or"
+            className="whitespace-nowrap rounded-full border border-white/40 px-8 py-[17px] text-[13px] font-semibold uppercase tracking-[2.5px] text-white backdrop-blur-[8px] hover:border-or hover:text-or sm:px-[46px]"
           >
             {dict.hero.cta2}
           </Link>
@@ -68,13 +68,16 @@ export default function Hero({
 
       {/* Bandeau de chiffres */}
       <div className="relative border-t border-[rgba(216,168,24,0.3)] bg-[rgba(7,17,12,0.5)] backdrop-blur-[10px]">
-        <div className="mx-auto grid max-w-[1400px] grid-cols-[repeat(auto-fit,minmax(200px,1fr))] px-10 py-[30px]">
-          {dict.stats.map((st) => (
+        {/* 3 stats : rangée unique sur desktop ; sur mobile 2 en haut + 1 centrée en bas */}
+        <div className="mx-auto grid max-w-[1400px] grid-cols-2 px-4 py-[18px] sm:px-10 sm:py-[30px] md:grid-cols-3">
+          {dict.stats.map((st, i) => (
             <div
               key={st.label}
-              className="flex min-w-0 flex-col items-center gap-[6px] border-r border-[rgba(216,168,24,0.2)] px-6 py-[6px]"
+              className={`flex min-w-0 flex-col items-center gap-[6px] border-[rgba(216,168,24,0.2)] px-3 py-[10px] sm:px-6 sm:py-[6px] md:border-r ${
+                i === 0 ? "border-r" : ""
+              } ${i < 2 ? "max-md:border-b" : "max-md:col-span-2"}`}
             >
-              <span className="font-serif text-[34px] font-medium italic text-or">
+              <span className="font-serif text-[26px] font-medium italic text-or sm:text-[34px]">
                 {st.value}
               </span>
               <span className="text-center text-[11px] uppercase tracking-[3px] text-white/70">

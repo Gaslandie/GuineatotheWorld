@@ -19,7 +19,7 @@ export default function FinalCta({
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[640px] w-[640px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(216,168,24,0.14)]" />
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[460px] w-[460px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(216,168,24,0.1)]" />
 
-      <div className="relative mx-auto flex max-w-[900px] flex-col items-center gap-7 px-10 py-[150px] text-center">
+      <div className="relative mx-auto flex max-w-[900px] flex-col items-center gap-7 px-6 py-24 text-center sm:px-10 sm:py-[150px]">
         <span className="text-[12px] font-semibold uppercase tracking-[5px] text-or">
           {dict.finalCta.kicker}
         </span>
@@ -36,33 +36,33 @@ export default function FinalCta({
             href={whatsappLink(siteConfig.whatsapp.guinea)}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 whitespace-nowrap rounded-full bg-wa px-10 py-[17px] text-[13px] font-semibold uppercase tracking-[2px] text-white hover:-translate-y-[3px] hover:bg-wa-fonce"
+            className="flex items-center gap-3 whitespace-nowrap rounded-full bg-wa px-7 py-[17px] text-[13px] font-semibold uppercase tracking-[2px] text-white hover:-translate-y-[3px] hover:bg-wa-fonce sm:px-10"
           >
             <WhatsAppIcon size={18} /> WhatsApp
           </a>
           <Link
             href={`/${lang}/contact`}
-            className="whitespace-nowrap rounded-full bg-rouge px-10 py-[17px] text-[13px] font-semibold uppercase tracking-[2px] text-white shadow-[0_16px_44px_rgba(168,0,0,0.4)] hover:-translate-y-[3px] hover:bg-rouge-vif"
+            className="whitespace-nowrap rounded-full bg-rouge px-7 py-[17px] text-[13px] font-semibold uppercase tracking-[2px] text-white shadow-[0_16px_44px_rgba(168,0,0,0.4)] hover:-translate-y-[3px] hover:bg-rouge-vif sm:px-10"
           >
             {dict.finalCta.btn}
           </Link>
         </div>
 
-        <div className="mt-[18px] flex flex-wrap justify-center gap-9 text-[14px] font-light text-[rgba(250,247,240,0.6)]">
+        <div className="mt-[18px] flex flex-col items-center gap-3 text-[14px] font-light text-[rgba(250,247,240,0.6)] sm:flex-row sm:flex-wrap sm:justify-center sm:gap-9">
           <a
             href="tel:+224623655468"
             className="text-[rgba(250,247,240,0.6)] hover:text-or"
           >
             {siteConfig.phones.guinea}
           </a>
-          <span className="text-[rgba(216,168,24,0.5)]">·</span>
+          <span className="hidden text-[rgba(216,168,24,0.5)] sm:inline">·</span>
           <a
             href="tel:+233531691086"
             className="text-[rgba(250,247,240,0.6)] hover:text-or"
           >
             {siteConfig.phones.ghana}
           </a>
-          <span className="text-[rgba(216,168,24,0.5)]">·</span>
+          <span className="hidden text-[rgba(216,168,24,0.5)] sm:inline">·</span>
           <a
             href={`mailto:${siteConfig.emails.primary}`}
             className="text-[rgba(250,247,240,0.6)] hover:text-or"
