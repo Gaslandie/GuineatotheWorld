@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/*
+  Direction artistique Guinea to the World (Tailwind v4 — CSS-first).
+  Chaque token de couleur génère automatiquement les utilitaires
+  (bg-*, text-*, border-*, etc.).
+*/
+@theme {
+  /* Palette de marque */
+  --color-noir: #000000;
+  --color-encre: #0a0a0a;
+  --color-or: #d8a818;
+  --color-or-fonce: #b8901a;
+  --color-or-clair: #e8c968;
+  --color-vert: #184830;
+  --color-vert-clair: #1f5c3d;
+  --color-rouge: #a80000;
+  --color-rouge-vif: #c40b0b;
+  --color-creme: #faf7f0;
+  --color-blanc: #ffffff;
+
+  /* Fonds sombres du design (hero, sections vertes, footer) */
+  --color-nuit: #07110c;
+  --color-foret: #0f2b1c;
+
+  /* WhatsApp */
+  --color-wa: #25d366;
+  --color-wa-fonce: #1eb757;
+
+  /* Typographies */
+  --font-sans: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, "Times New Roman", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background: var(--color-creme);
+  --foreground: var(--color-encre);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Les titres utilisent la serif élégante par défaut. */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+}
+
+/* Transitions douces sur tous les liens (fidèle au design). */
+a {
+  transition:
+    color 0.25s,
+    background-color 0.25s,
+    border-color 0.25s,
+    transform 0.25s,
+    opacity 0.25s,
+    gap 0.25s;
+}
+
+::selection {
+  background: var(--color-or);
+  color: #000;
+}
+
+/* ===== Animations du design ===== */
+@keyframes floatPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes scrollHint {
+  0% { transform: translateY(0); opacity: 1; }
+  70% { transform: translateY(10px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 0; }
+}
+
+/* ===== Section services : colonne gauche sticky → statique sous 960px ===== */
+@media (max-width: 960px) {
+  .svc-grid {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+  }
+  .svc-grid > div:first-child {
+    position: static !important;
+  }
+}

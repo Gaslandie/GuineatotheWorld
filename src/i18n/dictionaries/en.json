@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "Guinea to the World — International travel agency",
+    "description": "Language immersions, tourism, flight tickets and tailor-made support. From Conakry to Accra and beyond — travel with a house you can trust."
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "gallery": "Gallery",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "header": {
+    "tagline": "International travel agency"
+  },
+  "hero": {
+    "kicker": "Conakry — Accra — The world",
+    "title1": "Your gateway",
+    "titleEm": "to the world",
+    "sub": "Language immersions, tourism, flight tickets and tailor-made support. From Conakry to Accra and beyond — travel with a house you can trust.",
+    "cta1": "Contact us",
+    "cta2": "Our services",
+    "bgPlaceholder": "Cinematic image — plane wing at sunset or Accra skyline"
+  },
+  "stats": [
+    { "value": "2", "label": "Countries" },
+    { "value": "6", "label": "Complete services" },
+    { "value": "3 yrs", "label": "On-the-ground experience" },
+    { "value": "100%", "label": "A-to-Z support" }
+  ],
+  "ticker": ["Accra", "Conakry", "Paris", "Istanbul", "Dubai", "Casablanca", "London", "New York"],
+  "trust": {
+    "label": "They trust us"
+  },
+  "services": {
+    "paren": "Our services",
+    "title1": "The art of travelling,",
+    "titleEm": "without a single worry",
+    "intro": "Six specialities, one house. From the first idea to your return home, every detail is orchestrated by our teams in Conakry and Accra.",
+    "link": "Talk to an advisor",
+    "items": [
+      { "title": "Immersion & languages", "desc": "Supervised language stays in Accra and Conakry: intensive English, housing and personal follow-up." },
+      { "title": "Tourism & travel", "desc": "Discovery tours, excursions and organised stays across West Africa and beyond." },
+      { "title": "Flight tickets", "desc": "Best-fare bookings across all airlines, with personalised route advice." },
+      { "title": "Visa assistance", "desc": "Full application file, appointment booking and step-by-step follow-up." },
+      { "title": "Accommodation", "desc": "Safe, verified housing: residences, hotels and trusted host families." },
+      { "title": "Purchasing & business travel", "desc": "Support for your trade missions: sourcing, purchasing and local connections." }
+    ]
+  },
+  "why": {
+    "paren": "Why choose us",
+    "title1": "A house that watches over you,",
+    "titleEm": "every step of the way",
+    "items": [
+      { "title": "A-to-Z support", "desc": "From first contact to your return: we handle every detail of your travel project." },
+      { "title": "Attentive supervision", "desc": "Your children and loved ones are personally looked after, on site, throughout their stay." },
+      { "title": "Fast procedures", "desc": "Simplified paperwork and efficient handling of your file, with no wasted time." },
+      { "title": "Effective training", "desc": "Proven immersion programmes, with measurable progress from the very first weeks." }
+    ]
+  },
+  "founder": {
+    "paren": "Trust built on the ground",
+    "badge": "Resident in Ghana",
+    "title": "Sékou Gassama, your bridge between Guinea and Ghana",
+    "body": "Former president of the association of Guineans living in Ghana, Sékou has built a solid network on the ground — schools, residences, administrations. Every participant is welcomed at the airport, housed and personally supervised. That is why parents entrust us with their children with complete peace of mind.",
+    "quote": "“Your safety and your success are our only priority — from departure to return.”",
+    "name": "Sékou Gassama",
+    "role": "Founder",
+    "portraitPlaceholder": "Portrait of the founder — Sékou Gassama"
+  },
+  "testimonials": {
+    "paren": "Testimonials",
+    "title1": "They travelled",
+    "titleEm": "with us",
+    "aside": "— and they say it better than we do",
+    "items": [
+      { "quote": "My son spent three months in immersion in Accra. Impeccable supervision, regular news — I recommend it to every parent.", "name": "Mariama D.", "role": "Parent · Conakry", "initials": "MD" },
+      { "quote": "Thanks to GTTW my English made a huge leap. Housing, school, outings: everything was organised — all I had to do was learn.", "name": "Ibrahima S.", "role": "Immersion 2025", "initials": "IS" },
+      { "quote": "Tickets, visa, hotel for my trade mission in Ghana: all sorted in a few days. A real time-saver.", "name": "Fatoumata C.", "role": "Business travel", "initials": "FC" }
+    ]
+  },
+  "gallery": {
+    "paren": "Gallery",
+    "title1": "Memories that make you",
+    "titleEm": "want to leave",
+    "link": "See the full gallery",
+    "slots": [
+      "Trip photo — group in Accra",
+      "Photo — English class",
+      "Photo — tourist visit",
+      "Photo — airport / departure",
+      "Photo — accommodation"
+    ]
+  },
+  "finalCta": {
+    "kicker": "The world is waiting",
+    "title1": "Ready to travel",
+    "titleEm": "with us?",
+    "body": "Write to us today — we reply quickly, in French and in English.",
+    "btn": "Contact us"
+  },
+  "footer": {
+    "about": "International travel agency based in Conakry with a presence in Accra. Immersion, tourism, tickets and personal support — your gateway to the world.",
+    "nav": "Navigation",
+    "offices": "Offices",
+    "accraLine": "Accra, Ghana",
+    "conakryLine": "Conakry, Guinea",
+    "copyright": "© 2026 Guinea to the World. All rights reserved."
+  }
+}
