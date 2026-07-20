@@ -116,16 +116,18 @@ export default function SiteFooter({
           </div>
         </div>
 
-        {/* Filigrane géant — min abaissé à 20px pour tenir sans être coupé sur mobile */}
-        <div className="overflow-hidden pb-3 pt-[34px]">
+        {/* Filigrane géant — masqué sur mobile : réduit à ~28px et presque
+            transparent, il ressemblait à un défaut d'affichage plus qu'à un effet */}
+        <div className="hidden overflow-hidden pb-3 pt-[34px] sm:block">
           <div className="whitespace-nowrap text-center font-serif text-[clamp(20px,7.2vw,104px)] font-medium leading-none tracking-[2px] text-[rgba(250,247,240,0.08)]">
             Guinea to the World
           </div>
         </div>
 
-        {/* Barre de copyright — empilée et centrée sur mobile ; marge à droite
-            pour ne pas passer sous le bouton WhatsApp flottant */}
-        <div className="flex flex-col items-center gap-2 pb-[26px] pt-[18px] text-center text-[12.5px] font-light text-white/35 sm:flex-row sm:justify-between sm:pr-[84px] sm:text-left">
+        {/* Barre de copyright — empilée et centrée sur mobile, avec un grand
+            pb pour que le bouton WhatsApp flottant ne recouvre pas les textes ;
+            sur desktop, marge à droite pour la même raison */}
+        <div className="flex flex-col items-center gap-2 pb-[96px] pt-7 text-center text-[12.5px] font-light text-white/35 sm:flex-row sm:justify-between sm:pb-[26px] sm:pr-[84px] sm:pt-[18px] sm:text-left">
           <span>{dict.footer.copyright}</span>
           <span className="tracking-[3px]">CONAKRY · ACCRA</span>
         </div>
