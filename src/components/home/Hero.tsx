@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
-import ImageSlot from "@/components/ui/ImageSlot";
 
 /** Section hero plein écran : image de fond, titre, CTA et bandeau de chiffres. */
 export default function Hero({
@@ -16,9 +15,12 @@ export default function Hero({
       id="accueil"
       className="relative flex min-h-screen flex-col overflow-hidden bg-nuit"
     >
-      {/* Image de fond (placeholder en attendant le vrai visuel) */}
-      <div className="absolute inset-0">
-        <ImageSlot label={dict.hero.bgPlaceholder} tone="dark" />
+      {/* Fond en attendant le vrai visuel : dégradé cinématique nuit + halo doré.
+          Remplacer ce bloc par la photo (aile d'avion / skyline d'Accra) quand elle sera fournie. */}
+      <div className="absolute inset-0 bg-nuit">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_72%_18%,rgba(216,168,24,0.14),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_15%_85%,rgba(24,72,48,0.55),transparent_65%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_50%_110%,rgba(15,43,28,0.8),transparent_70%)]" />
       </div>
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(7,17,12,0.6)_0%,rgba(7,17,12,0.15)_45%,rgba(7,17,12,0.85)_100%)]" />
 
